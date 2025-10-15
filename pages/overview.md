@@ -5,6 +5,11 @@ This NeurIPS 2025 Machine Learning competition explores uncertainty-aware and ou
 🚀 **Phase 1** of the competition has started!  
 🚩 To enter the competition, please register through your **affiliation/institutional email**. 
 ***
+
+<span style="background: linear-gradient(to right, #d0e8ff, #b3d1ff); color: #003366; padding: 24px 36px; border-radius: 8px; font-weight: 600; font-size: 22px; display: inline-block;">
+  Phase-1 Leaderboard is <a href="https://fair-universe.lbl.gov/WeakLensing-Uncertainty-Challenge.html" target="_blank" style="color: #0056b3; text-decoration: underline;">here</a>
+</span>
+
 ## Introduction
 The large-scale structure of the universe—the cosmic web of galaxies, galaxy clusters, and dark matter spanning hundreds of millions of light-years—encodes essential information about the composition, evolution, and fundamental laws governing the cosmos. However, the majority of matter in the universe is dark matter, which does not interact with light and can only be observed indirectly through its gravitational effects. According to Einstein’s theory of general relativity, the gravitational field of this large-scale structure bends the path of light traveling through the universe. **Weak gravitational lensing** refers to the subtle, coherent distortions in the observed shapes of distant galaxies caused by the deflection of light as it traverses the inhomogeneous matter distribution of the universe. By statistically analyzing these distortions across large regions of the sky, weak lensing provides a powerful probe of the matter distribution and the underlying cosmological model that governs the expansion of the universe.
 
