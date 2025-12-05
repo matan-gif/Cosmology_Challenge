@@ -70,7 +70,7 @@ This competition allows only result submissions. Participants can submit a resul
 
 ## Timeline
 ***
-![alt text](image-2.png)
+<img src="image-2.png" width="100%">
 
 ## Credits
 ***
