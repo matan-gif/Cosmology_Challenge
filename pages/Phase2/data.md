@@ -61,4 +61,51 @@ The Phase 2 training data and test data will be available when the Phase 2 start
     You can also find visualizations about the dataset and the Phase 1 baseline methods in the `Starting Kit` tab. -->
 
 - ### Phase 2: Out-of-Distribution Detection
-    The Phase 2 baseline method and its starting kit will be available when the phase 2 starts.
+
+    1. **Chi-squared distributions from the Phase-1 baseline methods**
+
+        With the baseline MCMC methods of Phase 1, we assess the goodness-of-fit of the test sample $i$ using the $\chi^2$ statistic
+        $$
+            \chi_i^2 = [\boldsymbol{d}_i-\mu(\hat{\boldsymbol{\Theta}}_i)]^T {\rm Cov}^{-1}(\hat{\boldsymbol{\Theta}}_i)[\boldsymbol{d}_i-\mu(\hat{\boldsymbol{\Theta}}_i)]~,    
+        $$
+        where $\mu(\hat{\boldsymbol{\Theta}}_i)$ and ${\rm Cov}(\hat{\boldsymbol{\Theta}_i})$ are defined by Eqs.~(\ref{eq:mu}) and (\ref{eq:cov}), respectively, and are estimated at the best-fit parameters $\hat{\boldsymbol{\Theta}}_i = (\hat{\Omega}_{m,i}, \hat{S}_{8,i})$. The summary statistic $\boldsymbol{d}_i$ is given by Eqs~(\ref{eq:summary_statistic_PS}) or (\ref{eq:summary_statistic_CNN}). 
+
+        We then estimate the $p$-value for the test sample $i$ using the $\chi^2$ distribution of the training set that is only composed of InD samples by computing the fraction of InD training samples whose $\chi^2$ values are smaller than the test realization
+        $$
+            \rho_i = \text{probability}(\chi_{\rm train~(InD)}^2 > \chi_i^2)~.
+        $$
+        One way to convert a $p$-value into a conservative InD probability is through the Sellke–Bayarri–Berger method: for $\rho_i<e^{-1}$, the maximum possible Bayes factor for the OoD hypothesis against the InD (null) hypothesis is given by
+        $$
+            BF_i \equiv \frac{p\,({\rm data}_{\,i}|{\rm OoD})}{p\,({\rm data}_{\,i}|{\rm InD})} \leq \frac{1}{-e\,\rho_i \,{\rm ln}\,\rho_i}~.
+        $$
+        Assuming that the priors of InD and OoD are the same, we can conservatively estimate the InD probability by
+        $$
+            \hat{p}_{{\rm InD},i} \equiv p\,({\rm InD}|{\rm data}_{\,i}) \geq \frac{-e\,\rho_i \,{\rm ln}\,\rho_i}{1-e\,\rho_i \,{\rm ln}\,\rho_i} ~\text{ if } \rho_i < e^{-1}~; 
+        $$
+        otherwise $\hat{p}_{{\rm InD},i} = 0.5$. Our baseline predictions are then scored by Eq.~(\ref{eq:OoD_score}).
+
+    2. **Reconstruction errors with autoencoder}**
+
+        An alternative approach to estimate the InD probability is to quantify how well the test convergence maps can be reconstructed by a neural network trained exclusively on the InD samples. We train a convolutional autoencoder (AE) on the training set, which contains only InD realizations drawn from the fiducial cosmological prior. The AE learns a low-dimensional latent representation $\boldsymbol{z}$ of each convergence map $\boldsymbol{\kappa}$ through an encoder $\mathcal{E}_{\rm NN}^{\phi}(\boldsymbol{\kappa})$, and reconstructs the input via a decoder $\mathcal{D}_{\rm NN}^{\phi}(\boldsymbol{z})$. The reconstructed map is given by
+        $$
+            \hat{\boldsymbol{\kappa}} = \mathcal{D}_{\rm NN}^{\phi}(\boldsymbol{z} = \mathcal{E}_{\rm NN}^{\phi}(\boldsymbol{\kappa}))~. 
+        $$
+
+        For the network architecture, we employ a convolutional autoencoder with a low-dimensional latent bottleneck to quantify the degree to which each convergence map can be faithfully reconstructed by a model trained exclusively on InD data.
+
+        For simplicity, we train the model using a purely reconstruction-based objective. Specifically, the loss function minimizes the mean-squared reconstruction error,
+        $$
+            \mathcal{L}_{\rm AE} = \|\boldsymbol{\kappa} - \hat{\boldsymbol{\kappa}}\|^2,
+        $$
+        while the Kullback–Leibler regularization term normally used in VAEs is set to zero. As a result, the network behaves as a deterministic autoencoder during training, learning a compressed representation that preserves only the information required to reconstruct InD maps accurately.
+
+        For each map $\boldsymbol{\kappa}_i$, the autoencoder produces a reconstruction $\hat{\boldsymbol{\kappa}}_i$, and the reconstruction error is calculated by Eq.~(\ref{eq:loss_AE}). The distribution of reconstruction errors obtained from the training set provides an empirical reference for InD data. The test samples that yield significantly large or small reconstruction errors relative to the training distribution are more likely to be OoD realizations.
+
+    <!-- The plot below shows a comparison between the sampled posterior distributions of our three baseline methods. Comparing to the traditional power spectrum analysis, the neural networks can capture more information from the weak lensing data, leading to better predictions. 
+    <center>
+    <img src="image.png" width="400"> 
+    </center>
+
+    You can also find visualizations about the dataset and the Phase 1 baseline methods in the `Starting Kit` tab. --> -->
+
+    <!-- The Phase 2 starting kits will be available when the phase 2 starts. -->

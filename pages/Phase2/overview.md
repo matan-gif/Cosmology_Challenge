@@ -70,7 +70,8 @@ This competition allows only result submissions. Participants can submit a resul
 
 ## Timeline
 ***
-![alt text](image-2.png)
+Available soon.
+<!-- ![alt text](image-2.png) -->
 
 ## Credits
 ***
@@ -104,6 +105,9 @@ This competition allows only result submissions. Participants can submit a resul
 #### Université Paris-Saclay
 - Ragansu Chakkappai
 - David Rousseau
+
+#### University of Toronto
+- Ibrahim Elsharkawy
 
 
 
