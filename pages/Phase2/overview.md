@@ -30,8 +30,8 @@ In practice, the participants will be provided with a large labeled training dat
 - $\Omega_m$: a parameter that represents the fraction of the matter energy density in the universe.
 - $S_8$: a parameter that quantifies the amplitude of matter fluctuations in the present-day universe.
 
-Participants have to develop methods for out-of-distribution (OoD) detection, with the goal of identifying a fraction of the test data that deviates from the training distribution through a small in-distribution (InD) probability $p_{\rm InD}$. 
-The InD probability of an instance of the data can be potentially obtained by, for example, estimating the probability distribution of training data or evaluating some distance metrics between test and training data in a learned feature space.
+Participants have to develop methods for out-of-distribution (OoD) detection, with the goal of identifying a fraction of the test data that deviates from the training distribution through a small $p$-value. 
+<!-- The InD probability of an instance of the data can be potentially obtained by, for example, estimating the probability distribution of training data or evaluating some distance metrics between test and training data in a learned feature space. -->
 
 Our training datasets incorporate all major known systematics and are constructed to be as realistic as possible. As a result, we anticipate that models developed through this competition will be directly applicable to real observational data, enabling more robust and precise cosmological measurements.
 

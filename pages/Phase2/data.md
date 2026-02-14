@@ -68,13 +68,16 @@ The Phase 2 training data and test data will be available when the Phase 2 start
         $$
             \chi_i^2 = [\boldsymbol{d}_i-\mu(\hat{\boldsymbol{\Theta}}_i)]^T {\rm Cov}^{-1}(\hat{\boldsymbol{\Theta}}_i)[\boldsymbol{d}_i-\mu(\hat{\boldsymbol{\Theta}}_i)]~,    
         $$
-        where $\mu(\hat{\boldsymbol{\Theta}}_i)$ and ${\rm Cov}(\hat{\boldsymbol{\Theta}_i})$ are defined by Eqs.~(\ref{eq:mu}) and (\ref{eq:cov}), respectively, and are estimated at the best-fit parameters $\hat{\boldsymbol{\Theta}}_i = (\hat{\Omega}_{m,i}, \hat{S}_{8,i})$. The summary statistic $\boldsymbol{d}_i$ is given by Eqs~(\ref{eq:summary_statistic_PS}) or (\ref{eq:summary_statistic_CNN}). 
+        where $\mu(\hat{\boldsymbol{\Theta}}_i)$ and ${\rm Cov}(\hat{\boldsymbol{\Theta}_i})$ are the mean and covariance matrix of the summary statistics estimated at the best-fit parameters $\hat{\boldsymbol{\Theta}}_i = (\hat{\Omega}_{m,i}, \hat{S}_{8,i})$, and $\boldsymbol{d}_i$ is the summary statistic of the test sample $i$.
 
         We then estimate the $p$-value for the test sample $i$ using the $\chi^2$ distribution of the training set that is only composed of InD samples by computing the fraction of InD training samples whose $\chi^2$ values are smaller than the test realization
         $$
             \rho_i = \text{probability}(\chi_{\rm train~(InD)}^2 > \chi_i^2)~.
         $$
-        One way to convert a $p$-value into a conservative InD probability is through the Sellke–Bayarri–Berger method: for $\rho_i<e^{-1}$, the maximum possible Bayes factor for the OoD hypothesis against the InD (null) hypothesis is given by
+        
+        Our baseline predictions are then scored by our ROC scoring function.
+
+        <!-- One way to convert a $p$-value into a conservative InD probability is through the Sellke–Bayarri–Berger method: for $\rho_i<e^{-1}$, the maximum possible Bayes factor for the OoD hypothesis against the InD (null) hypothesis is given by
         $$
             BF_i \equiv \frac{p\,({\rm data}_{\,i}|{\rm OoD})}{p\,({\rm data}_{\,i}|{\rm InD})} \leq \frac{1}{-e\,\rho_i \,{\rm ln}\,\rho_i}~.
         $$
@@ -82,7 +85,7 @@ The Phase 2 training data and test data will be available when the Phase 2 start
         $$
             \hat{p}_{{\rm InD},i} \equiv p\,({\rm InD}|{\rm data}_{\,i}) \geq \frac{-e\,\rho_i \,{\rm ln}\,\rho_i}{1-e\,\rho_i \,{\rm ln}\,\rho_i} ~\text{ if } \rho_i < e^{-1}~; 
         $$
-        otherwise $\hat{p}_{{\rm InD},i} = 0.5$. Our baseline predictions are then scored by Eq.~(\ref{eq:OoD_score}).
+        otherwise $\hat{p}_{{\rm InD},i} = 0.5$. Our baseline predictions are then scored by our scoring function. -->
 
     2. **Reconstruction errors with autoencoder}**
 
@@ -99,13 +102,15 @@ The Phase 2 training data and test data will be available when the Phase 2 start
         $$
         while the Kullback–Leibler regularization term normally used in VAEs is set to zero. As a result, the network behaves as a deterministic autoencoder during training, learning a compressed representation that preserves only the information required to reconstruct InD maps accurately.
 
-        For each map $\boldsymbol{\kappa}_i$, the autoencoder produces a reconstruction $\hat{\boldsymbol{\kappa}}_i$, and the reconstruction error is calculated by Eq.~(\ref{eq:loss_AE}). The distribution of reconstruction errors obtained from the training set provides an empirical reference for InD data. The test samples that yield significantly large or small reconstruction errors relative to the training distribution are more likely to be OoD realizations.
+        For each map $\boldsymbol{\kappa}_i$, the autoencoder produces a reconstruction $\hat{\boldsymbol{\kappa}}_i$, and the reconstruction error is calculated. The distribution of reconstruction errors obtained from the training set provides an empirical reference for InD data. The test samples that yield significantly large or small reconstruction errors relative to the training distribution are more likely to be OoD realizations.
 
-    <!-- The plot below shows a comparison between the sampled posterior distributions of our three baseline methods. Comparing to the traditional power spectrum analysis, the neural networks can capture more information from the weak lensing data, leading to better predictions. 
-    <center>
-    <img src="image.png" width="400"> 
-    </center>
+***
 
-    You can also find visualizations about the dataset and the Phase 1 baseline methods in the `Starting Kit` tab. --> -->
+The figure below shows the $\chi^2$ distributions from the power spectrum analysis and the CNN MCMC method, as well as the distribution of reconstruction errors from the autoencoder. 
 
-    <!-- The Phase 2 starting kits will be available when the phase 2 starts. -->
+
+| ![Power Spectrum Analysis](PSA_chi-sq.png) | ![CNN with MCMC](CNN_chi-sq.png) | ![Autoencoder](AE_RE.png) |
+|:---:|:---:|:---:|
+| **Power Spectrum Analysis:** $\chi^2$ distributions | **CNN with MCMC:** $\chi^2$ distributions | **Autoencoder:** Reconstruction error distributions |
+
+*Figure: A comparison between all baseline methods for the Phase-2 task. The InD and OoD samples in the test data can be partially distinguished.*
