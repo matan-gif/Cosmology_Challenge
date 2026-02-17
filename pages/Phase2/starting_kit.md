@@ -29,7 +29,22 @@ We are preparing starting kits to help participants get started with the competi
 
 
 ### Dummy Sample Submission
-Dummy sample submission is provided for you to understand what is expected as a submission. The sample submission is a zip that only contains one json file named `result.json`. This file contains a list of `InD_prob`. The list contains 10,000 probabilities that each test sample is in-distribution under the training data’s systematics and nuisance-parameter ranges. The probabilities must be values between 0 and 1.
+Dummy sample submission is provided for you to understand what is expected as a submission. The sample submission is a zip that only contains one json file named `result.json`. This file contains a list of $10,000$ $p$-values, which must be values between 0 and 1.
+
+The format looks like this:
+
+```json
+{
+    "p_values": [
+            0.8356,
+            0.3141
+        ... # total 10,000 items
+        ]
+}
+```
+
+
+<!-- Dummy sample submission is provided for you to understand what is expected as a submission. The sample submission is a zip that only contains one json file named `result.json`. This file contains a list of `InD_prob`. The list contains 10,000 probabilities that each test sample is in-distribution under the training data’s systematics and nuisance-parameter ranges. The probabilities must be values between 0 and 1.
 
 The format looks like this:
 
@@ -41,7 +56,7 @@ The format looks like this:
         ... # total 10,000 items
         ]
 }
-```
+``` -->
 
 <!-- ### ⬇️ [<ins>Dummy Sample Submission</ins>]() -->
 

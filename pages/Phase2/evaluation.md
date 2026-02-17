@@ -2,19 +2,25 @@
 ***
 Participants must submit their predictions to the Codabench platform using the test data we provide. 
 
-<!-- - ### Phase 1: Cosmological Parameter Estimation
-    Participants' models should determine the point estimates $\hat{\Omega}_m$, $\hat{S}_8$ and their one-standard deviation uncertainties $\hat{\sigma}_{\Omega_m}$, $\hat{\sigma}_{S_8}$. The model performance will be ranked with the following score:
-        $$
-            \begin{aligned}
-            & \text { score }_{\text {inference }}=-\frac{1}{N_{\text {test }}} \sum_{i}^{N_{\text {test }}}\left\{\frac{\left(\hat{\Omega}_{m,i}-\Omega_{m,i}^{\text {truth}}\right)^2}{\hat{\sigma}_{\Omega_m,i}^2}+\frac{\left(\hat{S}_{8,i}-S_{8,i}^{\text {truth }}\right)^2}{\hat{\sigma}_{{S_8,i}}^2}\right. \\
-            & \left.\quad+\log \left(\hat{\sigma}_{\Omega_m,i}^2\right)+\log \left(\hat{\sigma}_{S_8,i}^2\right)+\lambda\left[\left(\hat{\Omega}_{m,i}-\Omega_{m,i}^{\text {truth }}\right)^2+\left(\hat{S}_{8,i}-S_{8,i}^{\text {truth }}\right)^2\right]\right\}.
-            \end{aligned}
-        $$
-    The first term corresponds to the Kullback–Leibler (KL) divergence (up to some constants) between the true posterior distribution and the Gaussian distribution with the predicted mean and standard deviation. We expect the posterior distribution to be pretty Gaussian and the correlation between $\Omega_m$ and $S_8$ to be small, thus the Gaussian approximation with diagonal covariance matrix should be good enough. The second term is an MSE loss with weight $\lambda=10^3$ to penalize bad point estimates.
+- ### Phase 2: Out-of-Distribution Detection
 
-    The Phase 1 test data contains 4,000 instances (2D fields similar to images) drawn from the same distribution as the training data with unknown cosmological parameters and 4 systematics.   -->
+    The Phase-2 test data will contain 10,000 instances (2D fields similar to images), with some instances generated assuming different physical models (OoD). The OoD test samples are labeled by $y_i=0$, while InD test samples are labeled by $y_i=1$. Participants will not be provided with the ground truth labels, any OoD examples, or any information on how the OoD test data are generated. 
 
-- ### Phase 2: Out-of-Distribution Detectionn
+    Given any test sample $i$, participant's model should determine a $p$-value $\hat{p}_i$ using any test statistics that can be predicted by the model. The $p$-value is the probability of observing a test statistic $TS$ *at least as extreme as* what is obtained from the test sample, assuming the test sample is InD
+        $$
+            \hat{p}_i = \text{probability}~(TS_{\rm InD} \text{ is more extreme than } TS_{i}) \in [0, 1]~.
+        $$
+    Under this definition, smaller $\hat{p}_i$ indicates greater inconsistency with the InD distribution; therefore, it can be regarded as a sort of InD score, and one can choose a threshold $p_{\rm th}$ of the $p$-value below which the test samples are detected as OoD; otherwis, detected as InD.
+
+    In this challenge, the model's OoD detection performance will then be evaluated with the area under the ROC (Receiver Operating Characteristic) curve defined by the True Positive Rate as a function of the False Positive Rate over a range of the $p$-value thresholds
+        $$
+            \text{Phase-2 score} \equiv \text{Area under ROC}~(0.005 \leq p_{\rm th} \leq 0.05)~. 
+        $$
+
+    We will provide the Phase-2 test data when the Phase 2 starts.
+
+
+<!-- - ### Phase 2: Out-of-Distribution Detection
     Participants' models should determine the **in-distribution probability $\hat{p}_{{\rm InD}, i}$** that the given dataset is consistent with the training data. The model's OoD detection performance will be assessed with the following score
         $$
             \textrm{score}_{\textrm{OoD}} = \frac{1}{N_{test}} \sum_{i}^{N_{\rm test}} \left[y_i \log(\hat{p}_{{\rm InD}, i}+ \epsilon)+(1-y_i)\log(1-\hat{p}_{{\rm InD}, i} + \epsilon)\right]~, 
@@ -24,4 +30,4 @@ Participants must submit their predictions to the Codabench platform using the t
 
     The Phase 2 test data will contain 6,000 instances (2D fields similar to images), with some instances generated assuming different physical models (OoD). The participants' models should estimate the probability $p_i$ of whether each test data is drawn from the same distribution as the training data. The participant will not be provided with OoD examples or any information on how the OoD test data are generated. 
 
-    We will provide the Phase 2 test data when the Phase 2 starts.
+    We will provide the Phase 2 test data when the Phase 2 starts. -->
