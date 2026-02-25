@@ -109,7 +109,7 @@ The Phase 2 training data and test data will be available when the Phase 2 start
 The figure below shows the $\chi^2$ distributions from the power spectrum analysis and the CNN MCMC method, as well as the distribution of reconstruction errors from the autoencoder. 
 
 <center>
-<img src="Phase2_Comparison.png" width="600"> 
+<img src="Phase2_Comparison.png" width="900"> 
 </center>
 
 
