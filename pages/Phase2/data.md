@@ -108,9 +108,9 @@ The Phase 2 training data and test data will be available when the Phase 2 start
 
 The figure below shows the $\chi^2$ distributions from the power spectrum analysis and the CNN MCMC method, as well as the distribution of reconstruction errors from the autoencoder. 
 
+<center>
+<img src="Phase2_Comparison.png" width="900"> 
+</center>
 
-| ![Power Spectrum Analysis](PSA_chi-sq.png) | ![CNN with MCMC](CNN_chi-sq.png) | ![Autoencoder](AE_RE.png) |
-|:---:|:---:|:---:|
-| **Power Spectrum Analysis:** $\chi^2$ distributions | **CNN with MCMC:** $\chi^2$ distributions | **Autoencoder:** Reconstruction error distributions |
 
 *Figure: A comparison between all baseline methods for the Phase-2 task. The InD and OoD samples in the test data can be partially distinguished.*
