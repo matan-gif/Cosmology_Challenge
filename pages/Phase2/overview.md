@@ -2,15 +2,10 @@
 *** 
 This **Phase 2** of Weak Lensing Machine Learning Uncertainty Challenge explores ***out-of-distribution (OoD) detection*** AI techniques for **Weak Gravitational Lensing Cosmology**.
 
-🏗️ The competition will start soon! **You can register now through your affiliation/company email address, and you will receive a notification when it officially start!**  
-<!-- 🚀 **Phase 2** of the competition will start soon!  
+🏗️ The competition will start soon! Some information remain tentative, but **you can register now through your affiliation/company email address, and you will receive a notification when it officially start!**   <!-- ##To change -->
+<!-- 🚀 **Phase 2** of the competition HAS STARTED!  
 🚩 To enter the competition, please register through your **affiliation/institutional email**.  -->
 ***
-
-<!-- <span style="background: linear-gradient(to right, #d0e8ff, #b3d1ff); color: #003366; padding: 24px 36px; border-radius: 8px; font-weight: 600; font-size: 22px; display: inline-block;">
-  Phase-2 Leaderboard is <a href="https://fair-universe.lbl.gov/WeakLensing-Uncertainty-Challenge.html" target="_blank" style="color: #0056b3; text-decoration: underline;">here</a>
-</span> -->
-
 
 ## Introduction
 The large-scale structure of the universe—the cosmic web of galaxies, galaxy clusters, and dark matter spanning hundreds of millions of light-years—encodes essential information about the composition, evolution, and fundamental laws governing the cosmos. However, the majority of matter in the universe is dark matter, which does not interact with light and can only be observed indirectly through its gravitational effects. According to Einstein’s theory of general relativity, the gravitational field of this large-scale structure bends the path of light traveling through the universe. **Weak gravitational lensing** refers to the subtle, coherent distortions in the observed shapes of distant galaxies caused by the deflection of light as it traverses the inhomogeneous matter distribution of the universe. By statistically analyzing these distortions across large regions of the sky, weak lensing provides a powerful probe of the matter distribution and the underlying cosmological model that governs the expansion of the universe.
@@ -24,28 +19,19 @@ The outcomes of this competition are expected to guide the development of next-g
 
 ## Competition Tasks: Out-of-Distribution Detection
 ***
-Through this competition, participants will analyze a suite of carefully designed mock weak lensing maps with known cosmological parameters, constructed to include variations in simulation fidelity and several observational systematic uncertainties. By comparing the performance and robustness of different methods in a controlled setting, the competition aims to systematically assess their ability to extract cosmological information while quantifying their sensitivity to modeling assumptions and systematics.
+Through this competition, participants will analyze a suite of carefully designed mock weak lensing convergence maps (2D fields similar to images) with known cosmological parameters, constructed to include variations in simulation fidelity and several observational systematic uncertainties. By comparing the performance and robustness of different methods in a controlled setting, the competition aims to systematically assess their ability to extract cosmological information while quantifying their sensitivity to modeling assumptions and systematics.
 
-In practice, the participants will be provided with a large labeled training dataset ($\sim$ 26k) to train models that learn useful features for cosmological inference on two key parameters:
-- $\Omega_m$: a parameter that represents the fraction of the matter energy density in the universe.
-- $S_8$: a parameter that quantifies the amplitude of matter fluctuations in the present-day universe.
-
-Participants have to develop methods for out-of-distribution (OoD) detection, with the goal of identifying a fraction of the test data that deviates from the training distribution through a small $p$-value. 
-<!-- The InD probability of an instance of the data can be potentially obtained by, for example, estimating the probability distribution of training data or evaluating some distance metrics between test and training data in a learned feature space. -->
+Participants are provided with a large training dataset to train models that learn useful cosmological features. Participants have to develop methods for **out-of-distribution (OoD) detection**, with the goal of identifying a fraction of the test data that deviates from the training distribution. 
 
 Our training datasets incorporate all major known systematics and are constructed to be as realistic as possible. As a result, we anticipate that models developed through this competition will be directly applicable to real observational data, enabling more robust and precise cosmological measurements.
 
 ***
 There are several materials regarding the FAIR Universe - Weak Lensing ML Uncertainty Challenge:
 
-* **<ins>Training Data / Test Data</ins>**: Will be available soon.
+* [**<ins>Training Data / Test Data (6.7 GB)</ins>**](): 
+The file includes the training data, physical labels, and the public test data for this competition.  <!-- ##To change -->
 
-<!-- * [**<ins>Training Data / Phase 2 Test Data (6.7 GB)</ins>**](https://www.codabench.org/datasets/download/c99c803a-450a-4e51-b5dc-133686258428/): 
-The file includes the training data, labels, and the Phase 2 test data for this competition.  -->
-
-* [**<ins>Competition Overview</ins>**](https://fair-universe.lbl.gov/tutorials/WL_Competition_Overview.pdf): This file presents high-level overview about this competition, the train/test data structure, evaluation metrics, and the expected competition timeline.
-
-<!-- * [**<ins>GitHub Repository</ins>**](https://github.com/FAIR-Universe/Cosmology_Challenge/tree/master): This repository hosts the code for testing submissions, as well as the starting kit notebooks ([<ins>Power Spectrum Analysis</ins>](https://github.com/FAIR-Universe/Cosmology_Challenge/blob/master/Phase_2_Startingkit_WL_PSAnalysis.ipynb) , [<ins>Convolutional Neural Network + MCMC</ins>](https://github.com/FAIR-Universe/Cosmology_Challenge/blob/master/Phase_2_Startingkit_WL_CNN_MCMC.ipynb)). The Phase 2 starting kits are also available over the `Starting Kit` tab of this competition or on Google Colab. -->
+* [**<ins>GitHub Repository</ins>**](https://github.com/FAIR-Universe/Cosmology_Challenge/tree/master): This repository hosts the code for testing submissions, as well as the starting kit notebooks ([<ins>Power Spectrum Analysis + MCMC</ins>](), [<ins>Convolutional Neural Network + MCMC</ins>](), and [<ins>Autoencoder</ins>]()). The starting kits are also available over the `Starting Kit` tab of this competition or on Google Colab. <!-- ##To change -->
 
 
 ## How to join this competition?
@@ -54,9 +40,9 @@ The file includes the training data, labels, and the Phase 2 test data for this 
 
    🚩 **Please register through your affiliation/company email address.** Contact us if you have any problems with this.
 
-  🏗️  **The competition will start soon. Registering now so that you will be notified when the competition start.**  
+  🏗️  **The competition will start soon. Registering now so that you will be notified when the competition start.**     <!-- ##To change -->
 
-- After the competition starts, go to the `Starting Kit` tab
+- Go to the `Starting Kit` tab 
 - Download the `Dummy Sample Submission`
 - Go to the `My Submissions` tab
 - Register in the Competition
@@ -70,7 +56,7 @@ This competition allows only result submissions. Participants can submit a resul
 
 ## Timeline
 ***
-Available soon.
+Available soon. <!-- ##To change -->
 <!-- ![alt text](image-2.png) -->
 
 ## Credits
@@ -82,12 +68,10 @@ Available soon.
 - Wahid Bhimji
 - Paolo Calafiura
 - Po-Wen Chang
-- Sascha Diefenbacher
 - Steven Farrell
 - Chris Harris
 
 #### University of California, Berkeley
-- Jordan Dudley
 - Uroš Seljak
 
 #### Stanford University / SLAC National Accelerator Laboratory
@@ -95,7 +79,6 @@ Available soon.
 
 #### University of Washington
 - Yuan-Tang Chou
-- Elham E Khoda
 - Yulei Zhang
 
 #### ChaLearn

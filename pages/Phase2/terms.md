@@ -6,7 +6,9 @@ This competition is for educational and research purposes, and it is governed by
 
 ## General Terms
 
-- **Code & Methodology Verification:** At the conclusion of each competition phase, top-ranking Participants must submit their complete source code and a concise technical write-up of their solution to the Organizers. The Organizers reserve the right, in their sole discretion, to evaluate these submissions on private test sets to verify the reproducibility of the reported results. Failure to reproduce the results to the Organizers' satisfaction will be grounds for disqualification.
+- **Evaluation and Final Rankings for Prizes**: The public test set and the public leaderboard on Codabench are designed for Participants to develop and compare their methods. To win the prizes, Participants must submit their complete source code and a concise technical write-up of their solution to the Organizers at the end of the competition. The Organizers will determine the final rankings using a holdout test set. The prizes will be awared based on the final rankings.
+
+- **Code and Methodology Verification:** The Organizers reserve the right to verify Participants' submissions and the reproducibility of the reported results. Failure to reproduce the results to the Organizers' satisfaction will be grounds for disqualification.
 
 - **Competition Framework Adjustments:** The Organizers reserve the right to modify any aspect of the competition framework, including but not limited to scoring metrics, datasets, or evaluation protocols, if critical issues that compromise the fairness or integrity of the competition are identified.
 
@@ -15,6 +17,8 @@ This competition is for educational and research purposes, and it is governed by
 - **Cheating and Unfair Practices:** Any form of cheating, score gaming, or attempt to manipulate the leaderboard or evaluation system is strictly prohibited. The Organizers reserve the right to disqualify any Participant found to be engaging in such activities.
 
 - **Confidentiality of Submissions:** Participants are strictly prohibited from sharing their submission code, methodologies, or any non-public competition data with other Participants or making them public for the duration of the competition. Violation of this rule will result in immediate disqualification.
+
+- **Usage of AI Agents:** The Organizers encourage Participants to come up with innovative solutions using novel workflows with AI agents, but Participants should disclose any usage of AI tools, the extent, and the role of such tools in their workflows.
 
 
 ## Participant Affiliation Guidelines
@@ -28,7 +32,7 @@ To ensure proper representation and verification of your affiliation with an org
 
 ## Team Participation
 
-If you are interested in participating as a team, please read the following terms. To register your team, contact us by sending an email to <ins>fair-universe@lbl.gov</ins>.
+If you are interested in participating as a team, please read the following terms. To register your team, please sign up this competition on Codabench with **single team account** and fill out [<ins>**this form**</ins>](). 
 
 1. A team can consist of 2-10 members. All team members must be declared in advance, including their names, emails, and affiliations.
 2. Each team must designate one member as the team leader, who will be responsible for communication and submissions.

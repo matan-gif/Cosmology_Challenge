@@ -15,7 +15,7 @@ root_dir_name = os.path.dirname(module_dir)
 # Args
 # ------------------------------------------
 parser = argparse.ArgumentParser(
-    description="This is script to generate data for the HEP competition."
+    description="This is script to run the scoring program for the competition."
 )
 parser.add_argument(
     "--codabench",
@@ -55,9 +55,6 @@ if __name__ == "__main__":
 
     # Start timer
     scoring.start_timer()
-
-    # Load training labels
-    scoring.load_training_labels(reference_dir)
 
     # Load reference data
     scoring.load_reference_data(reference_dir)
