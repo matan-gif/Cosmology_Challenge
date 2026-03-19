@@ -7,6 +7,7 @@ import numpy as np
 from datetime import datetime as dt
 from sklearn.metrics import roc_curve
 
+
 class Scoring:
     """
     This class is used to compute the scores for the competition.
@@ -54,7 +55,7 @@ class Scoring:
             reference_dir (str): The reference data directory name.
         """
         print("[*] Reading reference data")
-        reference_data_file = os.path.join(reference_dir, "phase2_label_test.npy")  # An array of 0 (InD) and 1 (OoD)
+        reference_data_file = os.path.join(reference_dir, "label_test_phase2.npy")  # An array of 0 (InD) and 1 (OoD)
         self.reference_data = np.load(reference_data_file)
 
     def load_ingestion_result(self, predictions_dir):
@@ -77,7 +78,7 @@ class Scoring:
         test_set_size = self.reference_data.shape[0]
 
         if test_set_size != len(self.ingestion_result["ood_scores"]):
-            raise ValueError(f"[-] Number of samples in ood_scores should be {test_set_size}"
+            raise ValueError(f"[-] Number of samples in ood_scores should be {test_set_size}")
 
     def compute_scores(self):
         """
@@ -110,9 +111,8 @@ class Scoring:
             fpr_log_interval = np.logspace(np.log10(min_fpr), np.log10(max_fpr), 100)
             tpr_log_interval = np.interp(fpr_log_interval, fpr, tpr)
             score_phase2 = np.mean(tpr_log_interval)
-            
-            return fpr_log_interval, tpr_log_interval, score_phase2
 
+            return fpr_log_interval, tpr_log_interval, score_phase2
 
         fpr_log_interval, tpr_log_interval, score_phase2 = _score_phase2(self.reference_data, self.ingestion_result["ood_scores"])
 
