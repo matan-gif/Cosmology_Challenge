@@ -1,33 +1,24 @@
 # Evaluation
 ***
-Participants must submit their predictions to the Codabench platform using the test data we provide. 
+Participants must submit their predictions to the Codabench platform using the public test data we provide. 
 
-- ### Phase 2: Out-of-Distribution Detection
+## Out-of-Distribution Detection Scoring Metric
 
-    The Phase-2 test data will contain 10,000 instances (2D fields similar to images), with some instances generated assuming different physical models (OoD). The OoD test samples are labeled by $y_i=0$, while InD test samples are labeled by $y_i=1$. Participants will not be provided with the ground truth labels, any OoD examples, or any information on how the OoD test data are generated. 
+Given a test sample $x_i$, participant's model should give a continuous OoD score $t(x_i)$ that increases monotonically with the confidence that their models predict a given sample as OoD.
 
-    Given any test sample $i$, participant's model should determine a $p$-value $\hat{p}_i$ using any test statistics that can be predicted by the model. The $p$-value is the probability of observing a test statistic $TS$ *at least as extreme as* what is obtained from the test sample, assuming the test sample is InD
-        $$
-            \hat{p}_i = \text{probability}~(TS_{\rm InD} \text{ is more extreme than } TS_{i}) \in [0, 1]~.
-        $$
-    Under this definition, smaller $\hat{p}_i$ indicates greater inconsistency with the InD distribution; therefore, it can be regarded as a sort of InD score, and one can choose a threshold $p_{\rm th}$ of the $p$-value below which the test samples are detected as OoD; otherwis, detected as InD.
+The figure below illustrates that, by setting a threshold over the OoD score, samples with $t(x)$ above the threshold are classified as OoD, while those below are treated as InD. As the threshold varies, the predictions will lead to different true positive rates (TPRs, correctly identifying OoD samples) and false positive rates (FPRs, misclassifying InD samples as OoD). Tracing the pairs of FPR and TPR across all thresholds naturally defines the Receiver Operating Characteristic (ROC) curve. The OoD score $t(x)$ could be, for example, any test statistic increasing monotonically with the OoD likelihood, or the $p$-value defined from the test statistics of the training data and test data. 
 
-    In this challenge, the model's OoD detection performance will then be evaluated with the area under the ROC (Receiver Operating Characteristic) curve defined by the True Positive Rate as a function of the False Positive Rate over a range of the $p$-value thresholds
-        $$
-            \text{Phase-2 score} \equiv \text{Area under ROC}~(0.005 \leq p_{\rm th} \leq 0.05)~. 
-        $$
+ <center>
+<img src="OoD_detection.png" width="400"> 
+</center>
 
-    We will provide the Phase-2 test data when the Phase 2 starts.
+*<center>Figure adapted from Diao et al. [<ins>2505.00632</ins>](https://arxiv.org/abs/2505.00632)</center>*
 
 
-<!-- - ### Phase 2: Out-of-Distribution Detection
-    Participants' models should determine the **in-distribution probability $\hat{p}_{{\rm InD}, i}$** that the given dataset is consistent with the training data. The model's OoD detection performance will be assessed with the following score
-        $$
-            \textrm{score}_{\textrm{OoD}} = \frac{1}{N_{test}} \sum_{i}^{N_{\rm test}} \left[y_i \log(\hat{p}_{{\rm InD}, i}+ \epsilon)+(1-y_i)\log(1-\hat{p}_{{\rm InD}, i} + \epsilon)\right]~, 
-        $$
-    where $\hat{p}_{{\rm InD},i} \in [0, 1]$, $y_i=1$ if the dataset is InD, $y_i=0$ if the dataset is OoD, and $\epsilon$ is a small positive constant to avoid a score of $-\infty$. 
-    
+In this competition, the model's OoD detection performance will be evaluated by the mean values of the ROC curve over $N=100$ logarithmically spaced FPRs between $0.001$ and $0.05$; that is,
+    $$
+        \text{Leaderboard score} \equiv \frac{1}{N}\sum_{i}^{N} \text{TPR}(\text{FPR}_i)  ~.
+    $$
+This metric is approximately propotional to the area under the ROC curve over the given FPR range in logarthimic scale. 
 
-    The Phase 2 test data will contain 6,000 instances (2D fields similar to images), with some instances generated assuming different physical models (OoD). The participants' models should estimate the probability $p_i$ of whether each test data is drawn from the same distribution as the training data. The participant will not be provided with OoD examples or any information on how the OoD test data are generated. 
-
-    We will provide the Phase 2 test data when the Phase 2 starts. -->
+The FPR range $[0.001,0.05]$ is chosen to match the regime of practical interest for scientific anomaly detection, where the FPR corresponds to the Type-I error rate (significance level $\alpha$). The interval spans thresholds from weak evidence ($\alpha \sim 0.05$) to stringent detection ($\alpha \sim 0.001$, approximately $3\sigma$). Focusing on this range therefore rewards models with high detection power under practically meaningful false-positive constraints, while logarithmic spacing emphasizes performance at the smallest FPRs.
