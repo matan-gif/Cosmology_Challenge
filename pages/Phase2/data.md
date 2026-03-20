@@ -8,7 +8,7 @@ These weak lensing convergence maps are generated from high-resolution cosmologi
 In addition to the cosmological signal, we also model various realistic systematic effects (distortions to the data), such as baryonic effect and photometric redshift uncertainty. These systematics are introduced in the data generation process, which we fully sampled in the training set so that the participants can marginalize over them. The parameters corresponding to these systematic models are nuisance parameters and need to be marginalized during inference.
 
 We have prepared the training data and the public test data for participants to develop their methods that will be scored on Codabench. Please download them from
-[**<ins>Training Data / Test Data (6.7 GB)</ins>**]().  <!-- ##To change -->
+[**<ins>Training Data / Test Data (15.5 GB)</ins>**](https://www.codabench.org/datasets/download/4bc5bb34-73e6-4f56-b397-7ca4f2454caf/).
 
 In the downloaded file, you will find:
 - **`WIDE12H_bin2_2arcmin_kappa_newrealization.npy`**: The training data of this competition. It contains $101 \times 256$ realizations of noiseless convergence maps. In this competition, we refer to **in-distribution (InD)** data as any data generated using the same simulation setup and the same distributions of cosmological and physical parameters as the training data.

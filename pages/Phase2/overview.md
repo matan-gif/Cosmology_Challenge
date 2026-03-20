@@ -28,10 +28,10 @@ Our training datasets incorporate all major known systematics and are constructe
 ***
 There are several materials regarding the FAIR Universe - Weak Lensing ML Uncertainty Challenge:
 
-* [**<ins>Training Data / Test Data (6.7 GB)</ins>**](): 
-The file includes the training data, physical labels, and the public test data for this competition.  <!-- ##To change -->
+* [**<ins>Training Data / Test Data (15.5 GB)</ins>**](https://www.codabench.org/datasets/download/4bc5bb34-73e6-4f56-b397-7ca4f2454caf/): 
+The file includes the training data, physical labels, and the public test data for this competition.
 
-* [**<ins>GitHub Repository</ins>**](https://github.com/FAIR-Universe/Cosmology_Challenge/tree/master): This repository hosts the code for testing submissions, as well as the starting kit notebooks ([<ins>Power Spectrum Analysis + MCMC</ins>](), [<ins>Convolutional Neural Network + MCMC</ins>](), and [<ins>Autoencoder</ins>]()). The starting kits are also available over the `Starting Kit` tab of this competition or on Google Colab. <!-- ##To change -->
+* [**<ins>GitHub Repository</ins>**](https://github.com/FAIR-Universe/Cosmology_Challenge/tree/master): This repository hosts the code for testing submissions, as well as the starting kit notebooks ([<ins>Power Spectrum Analysis + MCMC</ins>](https://github.com/FAIR-Universe/Cosmology_Challenge/blob/master/Phase_2_Startingkit_WL_PSAnalysis.ipynb), [<ins>Convolutional Neural Network + MCMC</ins>](https://github.com/FAIR-Universe/Cosmology_Challenge/blob/master/Phase_2_Startingkit_WL_CNN_MCMC.ipynb), and [<ins>Autoencoder</ins>](https://github.com/FAIR-Universe/Cosmology_Challenge/blob/master/Phase_2_Startingkit_WL_AE.ipynb)). The starting kits are also available over the `Starting Kit` tab of this competition or on Google Colab.
 
 
 ## How to join this competition?
@@ -100,4 +100,4 @@ Visit our website: <ins>https://fair-universe.lbl.gov/</ins>
 
 Email: <ins>fair-universe@lbl.gov</ins>
 
-Updates will be announced through the [<ins>Codabench forum</ins>](https://www.codabench.org/forums/8787/).
+Updates will be announced through the [<ins>Codabench forum</ins>](https://www.codabench.org/forums/10738/).

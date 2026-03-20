@@ -65,7 +65,7 @@ You can check the starting kit notebooks on our GitHub repository or through the
 #### ⚠️ Note:
 - To run the starting kits locally on your device, please directly clone this repository. The `input_data` directory of this repository contains a downsampled dataset that allows you to run the starting kit with minimal efforts. 
 - To run the CNN and Autoencoder baseline methods locally on your device, please make sure that you have installed all required libraries and relevant dependencies. Fore more information, please check our [<ins>**conda instructions**</ins>](https://github.com/FAIR-Universe/Cosmology_Challenge/tree/master/conda).
-- To fully train the baseline model and generate a dummy submission that can be scored on our competition website, you will need to download the public training data and the test data from the `Data` tab. The dataset is available [**<ins>here</ins>**]().   <!-- ##To change -->
+- To fully train the baseline model and generate a submission that can be scored on our competition website, you will need to download the public training data and the test data from the `Data` tab.
 
 
 
@@ -85,14 +85,7 @@ The format looks like this:
 ```
 
 
-
-### ⬇️ [<ins>Dummy Sample Submission</ins>]()  <!-- ##To change -->
-
-
-
-
-
-
+### ⬇️ [<ins>Dummy Sample Submission</ins>](https://www.codabench.org/datasets/download/f07c1ec8-5a6c-41c8-a139-1e433f606e9b/)
 
 
 determine a $p$-value $\hat{p}_i$ using any test statistics that can be predicted by the model. The $p$-value is the probability of observing a test statistic $TS$ *at least as extreme as* what is obtained from the test sample, assuming the test sample is InD
