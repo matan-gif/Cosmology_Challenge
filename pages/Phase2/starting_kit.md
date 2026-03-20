@@ -49,17 +49,17 @@ The figure below shows the $\chi^2$ distributions from the power spectrum analys
 We have prepared starting kits based on the baseline methods above to help participants get started with the competition, understand the data, and prepare submissions for Codabench. 
 You can check the starting kit notebooks on our GitHub repository or through the Google Colab below:
 
-1. [<ins>**OoD detection with Power Spectrum Analysis + MCMC**</ins>]() 
+1. [<ins>**OoD detection with Power Spectrum Analysis + MCMC**</ins>](https://github.com/FAIR-Universe/Cosmology_Challenge/blob/master/Phase_2_Startingkit_WL_PSAnalysis.ipynb) 
 
-    [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]()   <!-- ##To change -->
+    [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/FAIR-Universe/Cosmology_Challenge/blob/master/Phase_2_Startingkit_WL_PSAnalysis.ipynb)
 
-2. [<ins>**OoD detection with Convolutional Neural Network + MCMC**</ins>]() 
+2. [<ins>**OoD detection with Convolutional Neural Network + MCMC**</ins>](https://github.com/FAIR-Universe/Cosmology_Challenge/blob/master/Phase_2_Startingkit_WL_CNN_MCMC.ipynb) 
 
-    [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]()   <!-- ##To change -->
+    [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Cosmology_Challenge/blob/master/Phase_2_Startingkit_WL_CNN_MCMC.ipynb)
 
-2. [<ins>**OoD detection with Autoencoder**</ins>]() 
+2. [<ins>**OoD detection with Autoencoder**</ins>](https://github.com/FAIR-Universe/Cosmology_Challenge/blob/master/Phase_2_Startingkit_WL_AE.ipynb) 
 
-    [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]()   <!-- ##To change -->
+    [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/FAIR-Universe/Cosmology_Challenge/blob/master/Phase_2_Startingkit_WL_AE.ipynb)
 
 
 #### ⚠️ Note:
