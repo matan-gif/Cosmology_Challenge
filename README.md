@@ -1,15 +1,14 @@
 # FAIR Universe - Weak Lensing ML Uncertainty Challenge
 
-This repository consists of materials for the Weak Lensing ML Uncertainty Challenge, a NeurIPS 2025 Machine Learning competition that explores uncertainty-aware and out-of-distribution detection AI techniques for **Weak Gravitational Lensing Cosmology**.
+This repository consists of materials for the Weak Lensing ML Uncertainty Challenge, a Machine Learning competition that explores uncertainty-aware and out-of-distribution detection AI techniques for **Weak Gravitational Lensing Cosmology**.
 
 The competition is structured into two phases. 
-- **The Phase 1 of the competition has started! We are now accepting submissions until November 16th 2025.**
-- The Phase 2 of the competition is expected to be launched in **Late September 2025**.
+- The Phase 1 of the competition has ended in November 2025. Check out more details on our [<ins>competition website</ins>](https://www.codabench.org/competitions/8934/). The final results and the top solutions developed by our participants are available on [<ins>our website</ins>](https://fair-universe.lbl.gov/WeakLensing-Uncertainty-Challenge.html) and [<ins> our NeurIPS 2025 workshop agenda</ins>](https://fair-universe.lbl.gov/WeakLensing-Uncertainty-Challenge-Workshop.html).
 
-Please check the [**<ins>Competition Overview</ins>**](https://fair-universe.lbl.gov/tutorials/WL_Competition_Overview.pdf) for a high-level overview about this competition, the train/test data structure, evaluation metrics, and the expected competition timeline.
+- **The Phase 2 of the competition will start soon.**\
+    Interested in joining the Phase-2 competition? Please register as a participant on our [**<ins>competition website</ins>**](https://www.codabench.org/competitions/10902/) on Codabench!
 
-## Competition Website
-Interested in joining the competition? Please register as a participant on our [**<ins>Competition Website</ins>**](https://www.codabench.org/competitions/8934/) on Codabench!
+
 
 ***
 
@@ -37,14 +36,14 @@ Participants will develop models that:
 2. Quantify the uncertainties $(\hat{\sigma}_{\Omega_m}, \hat{\sigma}_{S_8})$ via the 68% confidence intervals of the estimated cosmological parameters.
 
 ### Phase 2: Out-of-Distribution Detection
-Some test data will be generated with different physical models (OoD), leading to some distribution shifts with respect to the test data in Phase 1. Participants will develop models that:
-1. Identify test data samples inconsistent with the training distribution (OoD detection).
-2. Provide probability estimates indicating data conformity to training distributions.
+Some test data will be generated with different physical models (OoD), leading to some distribution shifts with respect to the test data in Phase 1. Participants will develop models that can identify test data samples inconsistent with the training distribution (OoD detection) with a continuous OoD score.
    
 
 ## Getting Started
+We have prepared several starting kits for the Phase 1 and Phase 2 competitions. The notebooks include code examples for data loading, baseline approaches, evaluation, and submission preparation. You can also directly run the starting kits on Google Colab. 
+
 ### Phase 1: Cosmological Parameter Estimation
-We have prepared three Starting Kit for the Phase 1 competition. The notebooks include a code example for data loading, baseline approach, evaluation, and submission preparation. The Phase 1 baseline apporaces are the standard power spectrum analysis and the methods employing basic CNN emulators. You can also directly run the starting kits on Google Colab. 
+The Phase 1 baseline apporaces are the standard power spectrum analysis and the methods employing basic CNN emulators. 
 1. [<ins>**Power Spectrum Analysis**</ins>](https://github.com/FAIR-Universe/Cosmology_Challenge/blob/master/Phase_1_Startingkit_WL_PSAnalysis.ipynb) 
 
     [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/FAIR-Universe/Cosmology_Challenge/blob/master/Phase_1_Startingkit_WL_PSAnalysis.ipynb)
@@ -59,7 +58,26 @@ We have prepared three Starting Kit for the Phase 1 competition. The notebooks i
 
 
 ### Phase 2: Out-of-Distribution Detection
-The Starting Kit with a baseline approach for Phase 2 will be available when the Phase 2 starts.
+The Phase 2 baseline approaches include estimating the $p$-values by comparing $\chi^2$ values between test and training data, following the Phase-1 baseline methods, or by comparing reconstruction errors between OoD and InD samples using a trained autoencoder.
+
+1. [<ins>**Power Spectrum Analysis + MCMC**</ins>](https://github.com/FAIR-Universe/Cosmology_Challenge/blob/master/Phase_2_Startingkit_WL_PSAnalysis.ipynb) 
+
+    [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/FAIR-Universe/Cosmology_Challenge/blob/master/Phase_2_Startingkit_WL_PSAnalysis.ipynb)
+
+2. [<ins>**Convolutional Neural Network + MCMC**</ins>](https://github.com/FAIR-Universe/Cosmology_Challenge/blob/master/Phase_2_Startingkit_WL_CNN_MCMC.ipynb) 
+
+    [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/FAIR-Universe/Cosmology_Challenge/blob/master/Phase_2_Startingkit_WL_CNN_MCMC.ipynb)
+
+3. [<ins>**Autoencoder**</ins>](https://github.com/FAIR-Universe/Cosmology_Challenge/blob/master/Phase_2_Startingkit_WL_AE.ipynb) 
+
+    [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/FAIR-Universe/Cosmology_Challenge/blob/master/Phase_2_Startingkit_WL_AE.ipynb)
+
+
+
+
+
+
+
 
 ## Contact
 Visit our website: https://fair-universe.lbl.gov/
