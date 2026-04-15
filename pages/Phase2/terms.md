@@ -32,9 +32,10 @@ To ensure proper representation and verification of your affiliation with an org
 
 ## Team Participation
 
-If you are interested in participating as a team, please read the following terms. To register your team, please sign up this competition on Codabench with **single team account** and fill out [<ins>**this form**</ins>](). <!-- ##To change -->
+If you are interested in participating as a team, please read the following terms. To register your team, please sign up this competition on Codabench with **single team account**.
+<!-- fill out [<ins>**this form**</ins>](). ##To change -->
 
-1. A team can consist of 2-10 members. All team members must be declared in advance, including their names, emails, and affiliations.
+1. A team can consist of 2-10 members. You must send your team account ID and your team members' names, emails, and affiliations to <ins>fair-universe@lbl.gov</ins> for team participation. 
 2. Each team must designate one member as the team leader, who will be responsible for communication and submissions.
 3. The team leader must create a Codabench account using their email, and all submissions should be made through this account only.
 4. Multiple accounts for a single team are not allowed. Any team found using multiple accounts will be disqualified.
