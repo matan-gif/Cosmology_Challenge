@@ -15,7 +15,7 @@
     $$
         p\text{-value}_i = \text{probability}(\chi_{\rm train~(InD)}^2 > \chi_i^2)~.
     $$
-    The $p$-value is then taken as the OoD score.
+    We then take the negative $p$-value as the OoD score.
 
 2. **Reconstruction errors with autoencoder}**
 

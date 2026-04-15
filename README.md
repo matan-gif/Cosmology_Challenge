@@ -5,7 +5,7 @@ This repository consists of materials for the Weak Lensing ML Uncertainty Challe
 The competition is structured into two phases. 
 - The Phase 1 of the competition has ended in November 2025. Check out more details on our [<ins>competition website</ins>](https://www.codabench.org/competitions/8934/). The final results and the top solutions developed by our participants are available on [<ins>our website</ins>](https://fair-universe.lbl.gov/WeakLensing-Uncertainty-Challenge.html) and [<ins> our NeurIPS 2025 workshop agenda</ins>](https://fair-universe.lbl.gov/WeakLensing-Uncertainty-Challenge-Workshop.html).
 
-- **The Phase 2 of the competition will start soon.**\
+- **The Phase 2 of the competition is now open for submission until October 11th 2026!**\
     Interested in joining the Phase-2 competition? Please register as a participant on our [**<ins>competition website</ins>**](https://www.codabench.org/competitions/10902/) on Codabench!
 
 
@@ -21,7 +21,7 @@ The outcomes of this competition are expected to guide the development of next-g
 
 
 ## Dataset
-Participants will work with simulated datasets mimicking observations from the [Hyper Suprime-Cam (HSC) survey](https://science.jpl.nasa.gov/projects/hyper-suprime-cam/). The weak lensing convergence maps are generated from cosmological simulations with $101$ different cosmological models (parameters: $\Omega_m$ and $S_8$) and realistic systematic effects such as the baryonic effect and photometric redshift uncertainty. These systematics are introduced in the data generation process, which we fully sampled in the training set so that the participants can marginalize over them. The parameters corresponding to these systematic models are nuisance parameters and need to be marginalized during inference. Each data is a 2D image of dimension $1424 \times 176$, corresponds to the convergence map of redshift BIN 2 of WIDE12H in HSC Y3, pixelized with a resolution of 2 arcmin. 
+Participants will work with simulated datasets mimicking observations from the [Hyper Suprime-Cam (HSC) survey](https://science.jpl.nasa.gov/projects/hyper-suprime-cam/). The weak lensing convergence maps are generated from cosmological simulations with $101$ different cosmological models (parameters: $\Omega_m$ and $S_8$) and realistic systematic effects such as the baryonic effect and photometric redshift uncertainty. These systematics are introduced in the data generation process, which we fully sampled in the training set so that the participants can marginalize over them. The parameters corresponding to these systematic models are nuisance parameters and need to be marginalized during inference. Each data is a 2D image of dimension $1424 \times 176$, corresponds to the convergence map of redshift BIN $2$ of WIDE12H in HSC Y3, pixelized with a resolution of $2$ arcmin. 
 
 The figure below shows some examples of the training data and how they are varied with different nuisance parameters and pixel-level noise.
 
@@ -33,7 +33,7 @@ The figure below shows some examples of the training data and how they are varie
 ### Phase 1: Cosmological Parameter Estimation
 Participants will develop models that:
 1. Accurately infer cosmological parameters $(\hat{\Omega}_m, \hat{S}_8)$ from the weak lensing data.
-2. Quantify the uncertainties $(\hat{\sigma}_{\Omega_m}, \hat{\sigma}_{S_8})$ via the 68% confidence intervals of the estimated cosmological parameters.
+2. Quantify the uncertainties $(\hat{\sigma}_ {\Omega_{m}}, \hat{\sigma}_ {S_{8}})$ via the $68\%$ confidence intervals of the estimated cosmological parameters.
 
 ### Phase 2: Out-of-Distribution Detection
 Some test data will be generated with different physical models (OoD), leading to some distribution shifts with respect to the test data in Phase 1. Participants will develop models that can identify test data samples inconsistent with the training distribution (OoD detection) with a continuous OoD score.
