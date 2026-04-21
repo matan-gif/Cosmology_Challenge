@@ -2,7 +2,7 @@
 *** 
 The **Phase 2** of Weak Lensing Machine Learning Uncertainty Challenge explores ***out-of-distribution (OoD) detection*** AI techniques for **Weak Gravitational Lensing Cosmology**.
 
-🚀 **Phase 2** of the competition is now open for submission until **11:59 PM October 11th 2026 (UTC)**!
+🚀 **Phase 2** of the competition is now open for submission until **11:59 PM October 11th 2026 (UTC)**!  
 🚩 To enter the competition, please register through your **affiliation/institutional email**. 
 ***
 
@@ -29,6 +29,8 @@ There are several materials regarding the FAIR Universe - Weak Lensing ML Uncert
 
 * [**<ins>Training Data / Test Data (15.5 GB)</ins>**](https://www.codabench.org/datasets/download/71a3c810-f065-4af9-9476-a12c652ceb80/): 
 The file includes the training data, physical labels, and the public test data for this competition.
+
+* [**<ins>White paper</ins>**](https://arxiv.org/abs/2604.14451): Our white paper for this competition on arXiv. It contains more detailed information about our data simulation pipeline, the metrics we use, and the baseline methods we provide.
 
 * [**<ins>GitHub Repository</ins>**](https://github.com/FAIR-Universe/Cosmology_Challenge/tree/master): This repository hosts the code for testing submissions, as well as the starting kit notebooks ([<ins>Power Spectrum Analysis + MCMC</ins>](https://github.com/FAIR-Universe/Cosmology_Challenge/blob/master/Phase_2_Startingkit_WL_PSAnalysis.ipynb), [<ins>Convolutional Neural Network + MCMC</ins>](https://github.com/FAIR-Universe/Cosmology_Challenge/blob/master/Phase_2_Startingkit_WL_CNN_MCMC.ipynb), and [<ins>Autoencoder</ins>](https://github.com/FAIR-Universe/Cosmology_Challenge/blob/master/Phase_2_Startingkit_WL_AE.ipynb)). The starting kits are also available over the `Starting Kit` tab of this competition or on Google Colab.
 
@@ -57,36 +59,35 @@ This competition allows only result submissions. Participants can submit a resul
 
 ## Credits
 ***
-#### Institute for Advanced Study
-- Biwei Dai 
 
-#### Lawrence Berkeley National Laboratory
-- Wahid Bhimji
-- Paolo Calafiura
-- Po-Wen Chang
-- Steven Farrell
-- Chris Harris
+Biwei Dai $^1$\
+Po-Wen Chang $^2$\
+Wahid Bhimji $^2$\
+Paolo Calafiura $^2$\
+Ragansu Chakkappai $^{3,4}$\
+Yuan-Tang Chou $^5$\
+Ibrahim Elsharkawy $^6$\
+Steven Farrell $^2$\
+Isabelle Guyon $^4$\
+Chris Harris $^2$\
+Benjamin Nachman $^{7,8}$\
+David Rousseau $^{3,4}$\
+Uroš Seljak $^{9,2}$\
+Ihsan Ullah $^4$\
+Yulei Zhang $^5$
 
-#### University of California, Berkeley
-- Uroš Seljak
+---
 
-#### Stanford University / SLAC National Accelerator Laboratory
-- Benjamin Nachman
+$^1$ Institute for Advanced Study\
+$^2$ Lawrence Berkeley National Laboratory\
+$^3$ Université Paris-Saclay, CNRS/IN2P3, IJCLab\
+$^4$ ChaLearn\
+$^5$ University of Washington\
+$^6$ University of Toronto\
+$^7$ Stanford University\
+$^8$ SLAC National Accelerator Laboratory\
+$^9$ University of California, Berkeley
 
-#### University of Washington
-- Yuan-Tang Chou
-- Yulei Zhang
-
-#### ChaLearn
-- Isabelle Guyon
-- Ihsan Ullah
-
-#### Université Paris-Saclay
-- Ragansu Chakkappai
-- David Rousseau
-
-#### University of Toronto
-- Ibrahim Elsharkawy
 
 
 
