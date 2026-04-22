@@ -22,7 +22,8 @@ Through this competition, participants will analyze a suite of carefully designe
 
 Participants are provided with a large training dataset to train models that learn useful cosmological features. Participants have to develop methods for **out-of-distribution (OoD) detection**, with the goal of identifying a fraction of the test data that deviates from the training distribution. 
 
-Our training datasets incorporate all major known systematics and are constructed to be as realistic as possible. As a result, we anticipate that models developed through this competition will be directly applicable to real observational data, enabling more robust and precise cosmological measurements.
+Our training and test datasets incorporate all major known systematics and are constructed to be as realistic as possible. As a result, we anticipate that models developed through this competition will be directly applicable to real observational data, enabling more robust and precise cosmological measurements.
+
 
 ***
 There are several materials regarding the FAIR Universe - Weak Lensing ML Uncertainty Challenge:
