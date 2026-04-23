@@ -90,7 +90,7 @@ The format looks like this:
 
 ### Scoring Logs
 Once you make a successful submission, you will be able to:
-- Find your own score on the public leaderboard in the [`Results`](https://www.codabench.org/competitions/10902/?secret_key=9ffe996e-db55-4f71-a73e-879921f39bb8#/results-tab) tab.
+- Find your own score on the public leaderboard in the [`Results`](https://www.codabench.org/competitions/10902/#/results-tab) tab.
 
 
-- Check the TPR values of your submission evalauted at $100$ logarithmically spaced FPRs between $0.001$ and $0.05$. Simply navigate to [`My Submissions`](https://www.codabench.org/competitions/10902/?secret_key=9ffe996e-db55-4f71-a73e-879921f39bb8#/participate-tab) tab ➔ Any of your submissions ➔ LOGS ➔ Scoring Logs ➔ `stdout`. The TPR values are used to produce the final score of your submission (see `Evaluation` tab for more details). This information may be useful for you to improve your model performance.
+- Check the TPR values of your submission evalauted at $100$ logarithmically spaced FPRs between $0.001$ and $0.05$. Simply navigate to [`My Submissions`](https://www.codabench.org/competitions/10902/#/participate-tab) tab ➔ Any of your submissions ➔ LOGS ➔ Scoring Logs ➔ `stdout`. The TPR values are used to produce the final score of your submission (see `Evaluation` tab for more details). This information may be useful for you to improve your model performance.
