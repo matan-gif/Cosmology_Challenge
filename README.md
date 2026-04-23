@@ -9,6 +9,8 @@ The competition is structured into two phases.
     Interested in joining the Phase-2 competition? Please register as a participant on our [**<ins>competition website</ins>**](https://www.codabench.org/competitions/10902/) on Codabench!
 
 
+Please refer to our [**<ins>white paper</ins>**](https://arxiv.org/abs/2604.14451) for more detailed information about our data simulation pipeline, the metrics we use, and the baseline methods we provide.
+
 
 ***
 
